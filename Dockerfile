@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
     && setcap cap_net_raw+eip $(eval readlink -f `which node`) \
     && npm i -g node-red@latest
 
-WORKDIR /home/node/.node-red
+WORKDIR /root/.node-red
 
 RUN npm i node-red-node-sensortag
 
