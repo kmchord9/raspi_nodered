@@ -15,7 +15,7 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /root/.node-red
 
-RUN git clone https://github.com/kmchord9/sensor_tag.git
+RUN git clone https://github.com/kmchord9/sensor_tag.git \
     && npm i ./sensor_tag node-red-dashboard
 
 CMD ["/bin/bash"]
