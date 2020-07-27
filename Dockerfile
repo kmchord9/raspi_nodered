@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /root/.node-red
 
-RUN npm i node-red-node-sensortag
+RUN git clone https://github.com/kmchord9/raspi_nodered.git
+    && npm i ./raspi_nodered
 
 CMD ["/bin/bash"]
